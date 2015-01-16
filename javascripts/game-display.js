@@ -182,8 +182,9 @@ function display()
 
 function showCoords(evt) 
 {
-    var x = evt.pageX - 110;
-    var y = evt.pageY - 257;
+		var element = document.getElementById("myCanvas");
+    var x = evt.pageX - element.offsetLeft;
+    var y = evt.pageY - element.offsetTop;
     var coords = "X coords: " + x + ", Y coords: " + y;
     control([Math.floor(x/padx),Math.floor(y/pady)]);
     display();
